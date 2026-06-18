@@ -1,6 +1,6 @@
 # x86-64-asm-mooc
 
-> A self-contained, test-driven x86-64 assembly curriculum in the mooc.fi course format — learn Intel and AT&T syntax, the SysV AMD64 ABI, Linux syscalls, debugging, SIMD foundations, and capstone-level systems assembly.
+> A self-contained, test-driven x86-64 assembly curriculum in the mooc.fi course format. Learn Intel and AT&T syntax, the SysV AMD64 ABI, Linux syscalls, debugging, SIMD foundations, and capstone-level systems assembly.
 
 ## How it works
 
