@@ -2,8 +2,6 @@
 
 > A self-contained, test-driven x86-64 assembly curriculum in the mooc.fi course format — learn Intel and AT&T syntax, the SysV AMD64 ABI, Linux syscalls, debugging, SIMD foundations, and capstone-level systems assembly.
 
-This repository is generated from prompt **#11** of the [curriculum prompt library](../curriculum_prompts.md). It follows the same pedagogical contract as the sibling systems courses: why-before-what explanations, progressive scaffolding, frozen tests, red learner stubs, green reference solutions, and source-cited documentation.
-
 ## How it works
 
 Each exercise is a small C-harnessed unit:
