@@ -1,6 +1,6 @@
 # x86-64 Assembly Course Reference Corpus
 
-This is the source-of-truth documentation index for `x86-64-asm-mooc`.
+Reference index for `x86-64-asm-mooc`.
 
 Last checked from this workspace: 2026-06-16.
 
@@ -71,10 +71,10 @@ Do not infer ABI rules from compiler output alone. Do not teach Linux syscall co
 
 ## Course-owned distilled references
 
-- `SYNTAX_ROSETTA.md` — Intel and AT&T syntax comparison.
-- `ABI_NOTES.md` — SysV AMD64 ABI essentials.
-- `FLAGS_GUIDE.md` — condition flags and signed/unsigned reasoning.
-- `SYSCALLS.md` — Linux syscall ABI notes.
-- `DEBUGGING.md` — gdb/objdump workflow.
-- `docs/source-map.md` — part-to-source mapping.
-- `docs/competency-model.md` — expert outcomes.
+- `SYNTAX_ROSETTA.md`: Intel and AT&T syntax comparison.
+- `ABI_NOTES.md`: SysV AMD64 ABI essentials.
+- `FLAGS_GUIDE.md`: condition flags and signed/unsigned reasoning.
+- `SYSCALLS.md`: Linux syscall ABI notes.
+- `DEBUGGING.md`: gdb/objdump workflow.
+- `docs/source-map.md`: part-to-source mapping.
+- `docs/competency-model.md`: completion criteria.
