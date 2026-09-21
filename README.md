@@ -1,56 +1,65 @@
-# x86-64-asm-mooc
+# x86-64 Assembly MOOC
 
-> A self-contained, test-driven x86-64 assembly curriculum in the mooc.fi course format. Learn Intel and AT&T syntax, the SysV AMD64 ABI, Linux syscalls, debugging, SIMD foundations, and capstone-level systems assembly.
+A hands-on x86-64 assembly course built in a MOOC.fi-style exercise format.
 
-## How it works
+The course covers Intel and AT&T syntax, the SysV AMD64 ABI, Linux syscalls, debugging, SIMD basics, and larger capstone exercises.
 
-Each exercise is a small C-harnessed unit:
+## Exercise format
+
+Each exercise uses a small C test harness:
 
 ```text
 partNN-topic/
 └── NN-exercise-name/
-    ├── README.md            ← task, objective, time, difficulty, hints
-    ├── include/<name>.h     ← frozen C ABI
-    ├── src/<name>.S         ← learner stub, starts RED
-    ├── tests/test_<name>.c  ← frozen tests — do not modify
-    ├── solution/<name>.S    ← reference implementation
-    └── Makefile             ← `make test`, `make solve`, `make check`, `make objdump`
+    ├── README.md
+    ├── include/<name>.h
+    ├── src/<name>.S
+    ├── tests/test_<name>.c
+    ├── solution/<name>.S
+    └── Makefile
 ```
 
-The learner edits only `src/<name>.S`. Reference implementations live under `solution/` and exist to validate the course.
+Learners edit `src/<name>.S`. The C ABI and tests stay fixed. Reference implementations live under `solution/`.
 
 ## Quick start
 
 ```bash
 make check-all
-make -C part00-ground-zero/01-return-constant test     # start here — RED until implemented
-make -C part00-ground-zero/01-return-constant solve    # GREEN reference
-make -C part01-architecture-registers/01-add-two test   # RED until implemented
+
+make -C part00-ground-zero/01-return-constant test
+make -C part00-ground-zero/01-return-constant solve
+
+make -C part01-architecture-registers/01-add-two test
 make -C part01-architecture-registers/01-add-two objdump
+
 make solve-all
 make clean
 ```
 
-## Layout
+If you are new to assembly, start with [`part00-ground-zero/README.md`](part00-ground-zero/README.md).
 
-| Path | Purpose |
-|------|---------|
-| `CURRICULUM.md` | Full learning arc, prerequisite graph, shipped/mapped status |
-| `REFERENCE.md` | Source-of-truth documentation corpus |
-| `docs/source-map.md` | Maps every part to authoritative docs |
-| `docs/competency-model.md` | Expert-level completion criteria |
-| `SYNTAX_ROSETTA.md` | Intel ↔ AT&T syntax translation reference |
-| `ABI_NOTES.md` | SysV AMD64 ABI notes for C-callable assembly |
-| `FLAGS_GUIDE.md` | Condition flags and signed/unsigned reasoning |
-| `SYSCALLS.md` | Linux x86-64 syscall ABI notes |
-| `DEBUGGING.md` | gdb/objdump/compiler-output workflow |
-| `vendor/ctest/ctest.h` | Vendored tiny C test harness |
-| `Makefile.inc` | Shared per-exercise build logic |
+## Reference material
 
-## Curriculum status
+| Path | Contents |
+| --- | --- |
+| `CURRICULUM.md` | Course sequence, prerequisites, and exercise status |
+| `REFERENCE.md` | Core reference notes |
+| `docs/source-map.md` | Sources used for each part |
+| `docs/competency-model.md` | Completion criteria |
+| `SYNTAX_ROSETTA.md` | Intel and AT&T syntax comparison |
+| `ABI_NOTES.md` | SysV AMD64 ABI notes |
+| `FLAGS_GUIDE.md` | Condition flags and signed/unsigned comparisons |
+| `SYSCALLS.md` | Linux x86-64 syscall notes |
+| `DEBUGGING.md` | gdb, objdump, and compiler-output workflow |
+| `vendor/ctest/ctest.h` | Small vendored C test harness |
+| `Makefile.inc` | Shared exercise build rules |
 
-A ground-zero **Part 0** plus 12 numbered parts ship complete red/green exercises (34 exercises total), validated by `make solve-all`. Part 0 assumes **no prior assembly knowledge** and teaches registers, instructions, operand order, and the `.S` file from nothing; Parts 1–11 build conceptual and ABI fluency; Part 12 (Capstones) integrates them into a CRC-32 checksum, an SSE2 `memchr`, and a freestanding no-libc `cat`.
+## Current scope
 
-New to assembly? Start at [`part00-ground-zero/README.md`](part00-ground-zero/README.md).
+The repository contains Part 0 plus 12 numbered parts and 34 exercises.
 
-See [`CURRICULUM.md`](CURRICULUM.md), [`docs/source-map.md`](docs/source-map.md), and [`docs/competency-model.md`](docs/competency-model.md) before adding exercises.
+Part 0 starts with registers, instructions, operand order, and basic `.S` files. Later parts cover addressing, arithmetic, flags, control flow, stack frames, the ABI, RIP-relative addressing, string instructions, SIMD, syscalls, ELF, inline assembly, debugging, and disassembly.
+
+The capstone exercises include a CRC-32 checksum, an SSE2 `memchr`, and a freestanding no-libc `cat`.
+
+Run `make solve-all` to verify the shipped reference implementations.
