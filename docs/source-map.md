@@ -4,7 +4,7 @@ This map ties each part to authoritative documentation. If course code or prose 
 
 Last reviewed: 2026-06-16.
 
-## Part 0 — Ground Zero
+## Part 0: Ground Zero
 
 Exercises:
 
@@ -25,7 +25,7 @@ Correctness notes:
 - Keep exercises to a single computational instruction so the only new thing being
   tested is the toolchain/register/return model, not problem-solving.
 
-## Part 1 — Architecture, registers, and syntax
+## Part 1: Architecture, registers, and syntax
 
 Exercises:
 
@@ -42,7 +42,7 @@ Correctness notes:
 - `rdi`/`rsi` argument usage is ABI-defined, not purely architectural.
 - GAS Intel syntax is not NASM syntax; the syntax rosetta must keep these separate.
 
-## Part 2 — Data movement and addressing
+## Part 2: Data movement and addressing
 
 Exercises:
 
@@ -60,7 +60,7 @@ Required coverage:
 - scaled indexed addressing
 - RIP-relative addressing
 
-## Part 3 — Arithmetic, flags, and bit manipulation
+## Part 3: Arithmetic, flags, and bit manipulation
 
 Primary sources:
 
@@ -74,14 +74,14 @@ Required coverage:
 - shifts/rotates and count masking
 - bit test/manipulation instructions
 
-## Part 4 — Control flow and condition codes
+## Part 4: Control flow and condition codes
 
 Primary sources:
 
 - Intel/AMD manuals: `jmp`, `jcc`, `cmp`, `test`, `cmov`, `setcc`.
 - GDB docs for flags inspection.
 
-## Part 5 — Stack frames and SysV ABI
+## Part 5: Stack frames and SysV ABI
 
 Primary sources:
 
@@ -95,7 +95,7 @@ Required coverage:
 - caller/callee-saved registers
 - recursion and frame layout
 
-## Part 6 — Memory layout and RIP-relative addressing
+## Part 6: Memory layout and RIP-relative addressing
 
 Primary sources:
 
@@ -103,7 +103,7 @@ Primary sources:
 - GNU binutils docs.
 - Intel/AMD manuals for addressing semantics.
 
-## Part 7 — String and REP instructions
+## Part 7: String and REP instructions
 
 Primary sources:
 
@@ -115,14 +115,14 @@ Required coverage:
 - bounded copy/scan behavior
 - performance caveats as secondary, not normative
 
-## Part 8 — SIMD/SSE/AVX foundations
+## Part 8: SIMD/SSE/AVX foundations
 
 Primary sources:
 
 - Intel/AMD manuals: XMM/YMM registers and SSE/AVX instructions.
 - AMD64 ABI: vector register ABI rules.
 
-## Part 9 — Linux syscalls and minimal ELF programs
+## Part 9: Linux syscalls and minimal ELF programs
 
 Primary sources:
 
@@ -134,7 +134,7 @@ Correctness notes:
 - `syscall` clobbers `rcx` and `r11`.
 - syscall args use `rdi`, `rsi`, `rdx`, `r10`, `r8`, `r9`, not the C ABI fourth arg register `rcx`.
 
-## Part 10 — Inline assembly in C
+## Part 10: Inline assembly in C
 
 Primary sources:
 
@@ -148,7 +148,7 @@ Required coverage:
 - `volatile`
 - `memory` clobber
 
-## Part 11 — Debugging, disassembly, and compiler output
+## Part 11: Debugging, disassembly, and compiler output
 
 Lecture: `part11-debugging-disasm/README.md`
 
@@ -158,7 +158,7 @@ Primary sources:
 - GNU objdump/binutils docs.
 - GCC generated assembly docs/options.
 
-## Part 12 — Capstones
+## Part 12: Capstones
 
 Lecture: `part12-capstones/README.md`
 

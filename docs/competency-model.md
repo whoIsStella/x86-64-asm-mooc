@@ -1,8 +1,8 @@
 # x86-64 Assembly Competency Model
 
-This file defines expert-level completion for `x86-64-asm-mooc`.
+This file defines the skills covered by `x86-64-asm-mooc`.
 
-## Expert profile at course completion
+## Expected skills at completion
 
 A learner who completes this course should be able to:
 
@@ -19,25 +19,25 @@ A learner who completes this course should be able to:
 
 ## Competency levels
 
-### Level 1 — Instruction operator
+### Level 1: Instruction operator
 
 Can write simple register arithmetic and pass a C harness.
 
-### Level 2 — ABI-safe assembly programmer
+### Level 2: ABI-safe assembly programmer
 
 Can write C-callable functions, preserve registers, align the stack, and debug failures with disassembly.
 
-### Level 3 — Systems assembly engineer
+### Level 3: Systems assembly engineer
 
 Can combine stack frames, memory addressing, syscalls, SIMD, and inline asm with correct boundaries.
 
-### Level 4 — Expert practitioner
+### Level 4: Advanced practitioner
 
 Can audit and repair assembly for correctness, portability, ABI safety, and security-sensitive misuse.
 
 ## Part-by-part competencies
 
-### Part 1 — Architecture, registers, and syntax
+### Part 1: Architecture, registers, and syntax
 
 Learner can:
 
@@ -49,7 +49,7 @@ Evidence:
 
 - `01-add-two` solution passes and disassembles to a minimal implementation.
 
-### Part 2 — Data movement and addressing
+### Part 2: Data movement and addressing
 
 Learner can:
 
@@ -61,7 +61,7 @@ Evidence:
 
 - `01-lea-scale-add` solution uses `lea` to compute `base + index * 8 + 16` and passes signed test cases.
 
-### Part 3 — Arithmetic, flags, and bit manipulation
+### Part 3: Arithmetic, flags, and bit manipulation
 
 Learner can:
 
@@ -69,7 +69,7 @@ Learner can:
 - Choose signed vs unsigned condition codes.
 - Implement overflow-aware helpers.
 
-### Part 4 — Control flow and condition codes
+### Part 4: Control flow and condition codes
 
 Learner can:
 
@@ -77,7 +77,7 @@ Learner can:
 - Use `cmov`/`setcc` where appropriate.
 - Debug branch decisions through flags.
 
-### Part 5 — Stack frames and SysV ABI
+### Part 5: Stack frames and SysV ABI
 
 Learner can:
 
@@ -85,28 +85,28 @@ Learner can:
 - Preserve callee-saved registers.
 - Use recursion and local stack storage safely.
 
-### Part 6 — Memory layout and RIP-relative addressing
+### Part 6: Memory layout and RIP-relative addressing
 
 Learner can:
 
 - Access constants/tables position-independently.
 - Reason about stack/static/text sections at a practical level.
 
-### Part 7 — String and REP instructions
+### Part 7: String and REP instructions
 
 Learner can:
 
 - Use string instructions with correct direction-flag assumptions.
 - Avoid unbounded copy/scan bugs.
 
-### Part 8 — SIMD/SSE/AVX foundations
+### Part 8: SIMD/SSE/AVX foundations
 
 Learner can:
 
 - Use XMM/YMM registers for basic packed operations.
 - Explain ABI and transition caveats.
 
-### Part 9 — Linux syscalls and minimal ELF programs
+### Part 9: Linux syscalls and minimal ELF programs
 
 Learner can:
 
@@ -114,21 +114,21 @@ Learner can:
 - Explain syscall register conventions and clobbers.
 - Handle negative error returns where relevant.
 
-### Part 10 — Inline assembly in C
+### Part 10: Inline assembly in C
 
 Learner can:
 
 - Write GCC extended asm with correct constraints and clobbers.
 - Identify missing `memory` clobber hazards.
 
-### Part 11 — Debugging, disassembly, and compiler output
+### Part 11: Debugging, disassembly, and compiler output
 
 Learner can:
 
 - Use gdb/objdump evidence to diagnose defects.
 - Compare compiler output across optimization levels.
 
-### Part 12 — Capstones
+### Part 12: Capstones
 
 Learner can synthesize the course into:
 
@@ -137,7 +137,7 @@ Learner can synthesize the course into:
 - no-libc syscall utilities
 - reverse-engineering reports grounded in disassembly
 
-## Expert review questions
+## Review questions
 
 1. Is this behavior architectural, ABI-defined, assembler-specific, OS-specific, or debugger-specific?
 2. Which registers does this function have to preserve?
