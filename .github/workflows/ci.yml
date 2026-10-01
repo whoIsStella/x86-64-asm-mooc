@@ -1,0 +1,19 @@
+name: Reference exercises
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  references:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build starter and reference exercises
+        run: make check-all
+      - name: Verify reference implementations
+        run: make solve-all
