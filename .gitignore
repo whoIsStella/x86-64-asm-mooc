@@ -1,0 +1,2 @@
+# Per-exercise binaries and generated assembly are reproducible.
+build/
